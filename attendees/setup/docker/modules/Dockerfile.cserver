@@ -1,5 +1,6 @@
-FROM training/ansible
+FROM training/ansible:ubuntu
 
+RUN apt-get -y install tree
 COPY cserver.pub /root/.ssh/id_rsa.pub
 COPY cserver /root/.ssh/id_rsa
 
